@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">DZ13AlarmClock</string>
+    <string name="exit">Выход из приложения</string>
+    <string name="infoStr">Информация о приложении</string>
+    <string name="button_install_alarmclock">Установить будильник</string>
+    <string name="text_view_alarm">ТРЕВОГА!!!</string>
+    <string name="button_off_alarmclock">Выключить будильник</string>
+    <string name="text_view_alarm_clock">Будильник</string>
+</resources>
