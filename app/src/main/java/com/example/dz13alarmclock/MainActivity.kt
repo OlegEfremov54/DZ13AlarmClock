@@ -37,6 +37,7 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        //Инициация Тулбар
 
         toolbarMain = findViewById(R.id.toolbarMain)
         setSupportActionBar(toolbarMain)
@@ -44,11 +45,14 @@ class MainActivity : AppCompatActivity() {
         toolbarMain.subtitle = "Вер1.Главная страница"
         toolbarMain.setLogo(R.drawable.cklok)
 
-        val dateFormat = SimpleDateFormat("HH:mm", Locale.getDefault())
+        //Привязываем кнопки
         alarmButtonBTN = findViewById(R.id.alarmButtonBTN)
         showAlarmClockTV = findViewById(R.id.showAlarmClockTV)
 
+        //Задаем формат часов
+        val dateFormat = SimpleDateFormat("HH:mm", Locale.getDefault())
 
+        //Обработка кнопки установки Будильника
         alarmButtonBTN.setOnClickListener{
             materialTimePicker = MaterialTimePicker.Builder()
                 .setTimeFormat(TimeFormat.CLOCK_24H)
@@ -71,8 +75,9 @@ class MainActivity : AppCompatActivity() {
                 )
                 Toast.makeText(this, "Будильник установленна на ${dateFormat.format(calendar!!.time)}",
                     Toast.LENGTH_SHORT).show()
+
                 showAlarmClockTV.text = dateFormat.format(calendar!!.time)
-                showAlarmClockTV.textSize.plus(20)
+                showAlarmClockTV.textSize.plus(40)
             }
             materialTimePicker!!.show(supportFragmentManager, "tag_picker")
 
@@ -90,6 +95,7 @@ class MainActivity : AppCompatActivity() {
         )
     }
 
+    //Инициация меню
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
         return true

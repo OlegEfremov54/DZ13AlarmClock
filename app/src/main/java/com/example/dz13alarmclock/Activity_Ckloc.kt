@@ -31,20 +31,23 @@ class Activity_Ckloc : AppCompatActivity() {
             insets
         }
 
+        //Тулбар
         toolbarClok = findViewById(R.id.toolbarClok)
         setSupportActionBar(toolbarClok)
         title = " Будильник"
         toolbarClok.subtitle = "Вер1.Аларм страница"
         toolbarClok.setLogo(R.drawable.cklok)
 
-
+        //Привязка кнопок и Имидж
         stopAlarmButtonBTN = findViewById(R.id.stopAlarmButtonBTN)
         imageAlarmClockIV = findViewById(R.id.imageAlarmClockIV)
 
+        //Инициация ГИфки
         imageAlarmClockGifIV=findViewById(R.id.imageAlarmClockGifIV)
         imageAlarmClockGifIV.setImageResource(R.drawable.prigskok)
         imageAlarmClockGifIV.visibility = View.VISIBLE
 
+        //Обработка кнопки СТОП
         stopAlarmButtonBTN.setOnClickListener {
             finish()
             exitProcess(0)
@@ -52,8 +55,7 @@ class Activity_Ckloc : AppCompatActivity() {
         imageAlarmClockIV.setImageResource(R.drawable.baseline_alarm_24)
     }
 
-
-
+    //Инициация Меню
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_main, menu)
         return true
