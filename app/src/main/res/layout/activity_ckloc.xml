@@ -16,44 +16,45 @@
         tools:ignore="MissingConstraints"
         />
 
+
     <ImageView
         android:id="@+id/imageAlarmClockIV"
-        android:layout_width="123dp"
-        android:layout_height="181dp"
+        android:layout_width="106dp"
+        android:layout_height="124dp"
         android:layout_gravity="center"
         android:layout_marginHorizontal="20dp"
         android:layout_marginVertical="20dp"
         android:src="@drawable/baseline_alarm_24"
-        app:layout_constraintBottom_toTopOf="@id/textAlarmTV"
+        app:layout_constraintBottom_toTopOf="@id/imageAlarmClockGifIV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/toolbarClok"
+        app:layout_constraintVertical_bias="0.257" />
+
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/imageAlarmClockGifIV"
+        android:layout_width="232dp"
+        android:layout_height="229dp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginVertical="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/textAlarmTV"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!--        почему то зависимость в gradle для GIF не работает-->
-    <!--    <pl.droidsonroids.gif.GifImageView
-            android:id="@+id/imageAlarmClockIV"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginVertical="20dp"
-            android:layout_marginHorizontal="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />-->
+        tools:ignore="MissingClass,MissingConstraints" />
 
     <TextView
         android:id="@+id/textAlarmTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/text_view_alarm"
-        android:textSize="70sp"
         android:textColor="@color/red"
+        android:textSize="70sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="467dp"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/stopAlarmButtonBTN"

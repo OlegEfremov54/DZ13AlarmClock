@@ -3,6 +3,7 @@ package com.example.dz13alarmclock
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
@@ -17,6 +18,7 @@ class Activity_Ckloc : AppCompatActivity() {
     lateinit var toolbarClok:Toolbar
     private lateinit var stopAlarmButtonBTN: Button
     private lateinit var imageAlarmClockIV: ImageView
+    private lateinit var imageAlarmClockGifIV:ImageView
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -39,7 +41,9 @@ class Activity_Ckloc : AppCompatActivity() {
         stopAlarmButtonBTN = findViewById(R.id.stopAlarmButtonBTN)
         imageAlarmClockIV = findViewById(R.id.imageAlarmClockIV)
 
-
+        imageAlarmClockGifIV=findViewById(R.id.imageAlarmClockGifIV)
+        imageAlarmClockGifIV.setImageResource(R.drawable.prigskok)
+        imageAlarmClockGifIV.visibility = View.VISIBLE
 
         stopAlarmButtonBTN.setOnClickListener {
             finish()
